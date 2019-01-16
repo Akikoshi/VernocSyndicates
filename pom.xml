@@ -14,7 +14,7 @@
     </parent>
     <groupId>com.semjasa</groupId>
     <artifactId>vernocsyndicates</artifactId>
-    <version>0.0.2-SNAPSHOT</version>
+    <version>0.0.2</version>
     <name>vernocsyndicates</name>
     <description>Infos / Guides / and more for Vernoc Syndicates</description>
 
@@ -41,7 +41,7 @@
 
     <scm>
         <developerConnection>scm:git:https://github.com/Akikoshi/VernocSyndicates.git</developerConnection>
-      <tag>HEAD</tag>
+      <tag>vernocsyndicates-0.0.2</tag>
   </scm>
 
 </project>
