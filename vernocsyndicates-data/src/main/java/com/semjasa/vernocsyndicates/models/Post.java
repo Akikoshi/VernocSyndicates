@@ -2,7 +2,7 @@ package com.semjasa.vernocsyndicates.models;
 
 import java.time.LocalDate;
 
-public class Post {
+public class Post extends BaseEntity {
 
     public String headline;
     public String content;
