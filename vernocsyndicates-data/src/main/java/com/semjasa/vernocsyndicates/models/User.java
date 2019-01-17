@@ -1,6 +1,6 @@
 package com.semjasa.vernocsyndicates.models;
 
-public class User {
+public class User extends BaseEntity {
 
     private String firstName;
     private String lastName;
