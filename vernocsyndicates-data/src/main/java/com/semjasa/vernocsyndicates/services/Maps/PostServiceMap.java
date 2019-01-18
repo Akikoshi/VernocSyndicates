@@ -5,7 +5,7 @@ import com.semjasa.vernocsyndicates.services.PostService;
 
 import java.util.Set;
 
-public class PostServiceMap extends AbstractMapService<Post, Long> implements PostService<Post, Long> {
+public class PostServiceMap extends AbstractMapService<Post, Long> implements PostService {
 
     @Override
     public Set<Post> findAll() {

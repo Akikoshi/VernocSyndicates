@@ -19,7 +19,7 @@ public abstract class AbstractMapService<T, ID> {
     T save(ID id, T object){
         map.put(id, object);
 
-        return object
+        return object;
     }
 
     void delete(T object){

@@ -5,7 +5,7 @@ import com.semjasa.vernocsyndicates.services.UserService;
 
 import java.util.Set;
 
-public class UserServiceMap extends AbstractMapService<User, Long> implements UserService<User, Long> {
+public class UserServiceMap extends AbstractMapService<User, Long> implements UserService {
     @Override
     public Set<User> findAll() {
         return super.findAll();
@@ -18,7 +18,7 @@ public class UserServiceMap extends AbstractMapService<User, Long> implements Us
 
     @Override
     public User save(User object) {
-        return super.save(object);
+        return super.save(object.getId(),object);
     }
 
     @Override
