@@ -5,6 +5,16 @@
     <title>Posts - Index Page</title>
 </head>
 <body>
+<!--/*@thymesVar id="post" type="com.semjasa.vernocsyndicates.models.Post"*/-->
     <h1 th:text="'List of all Posts'">Post Index Page</h1>
+
+    <div th:each="post : ${posts}">
+        <h3 th:text="${post?.headline}"></h3>
+        <br>
+        <p th:text="${post?.content}"></p>
+        <p th:text="${post?.postDate}"></p>
+        <p th:text="${post?.user?.fullName}"></p>
+        <br>
+    </div>
 </body>
 </html>
