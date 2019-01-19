@@ -5,6 +5,26 @@
     <title>User - Index Page</title>
 </head>
 <body>
+<!--/*@thymesVar id="user" type="com.semjasa.vernocsyndicates.models.User"*/-->
     <h1 th:text="'List of Users'">User Index Page</h1>
+
+    <table>
+        <thead>
+        <tr>
+            <td>Id</td>
+            <td>First Name</td>
+            <td>Last Name</td>
+            <td>Full Name</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="user : ${users}">
+            <td th:text="${user?.id}"></td>
+            <td th:text="${user?.firstName}"></td>
+            <td th:text="${user?.lastName}"></td>
+            <td th:text="${user?.fullName}"></td>
+        </tr>
+        </tbody>
+    </table>
 </body>
 </html>
