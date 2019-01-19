@@ -26,7 +26,7 @@ public class PostServiceMap extends AbstractMapService<Post, Long> implements Po
 
     @Override
     public Post save(Post object) {
-        return super.save(object.getId(), object);
+        return super.save(object);
     }
 
     @Override

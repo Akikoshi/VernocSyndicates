@@ -11,9 +11,10 @@
     <div th:each="post : ${posts}">
         <h3 th:text="${post?.headline}"></h3>
         <br>
+        <p th:text="'Post ID: ' + ${post?.id}"></p>
         <p th:text="${post?.content}"></p>
         <p th:text="${post?.postDate}"></p>
-        <p th:text="${post?.user?.fullName}"></p>
+        <p th:text="${post?.user?.fullName} + ' with ID ' + ${post?.user?.id}"></p>
         <br>
     </div>
 </body>

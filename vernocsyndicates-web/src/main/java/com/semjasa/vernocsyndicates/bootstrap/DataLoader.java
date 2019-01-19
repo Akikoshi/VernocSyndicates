@@ -22,14 +22,12 @@ public class DataLoader implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         User user1 = new User();
-        user1.setId(1L);
         user1.setFirstName("Thomas");
         user1.setLastName("Heise");
 
         userService.save(user1);
 
         User user2 = new User();
-        user2.setId(2L);
         user2.setFirstName("Laura");
         user2.setLastName("Leske");
 
@@ -38,7 +36,6 @@ public class DataLoader implements CommandLineRunner {
         System.out.println("Users loaded.");
 
         Post post1 = new Post();
-        post1.setId(1L);
         post1.setUser(user1);
         post1.setPostDate(LocalDate.parse("2018-01-01"));
         post1.setHeadline("Thomas first Post");
@@ -47,7 +44,6 @@ public class DataLoader implements CommandLineRunner {
         postService.save(post1);
 
         Post post2 = new Post();
-        post2.setId(2L);
         post2.setUser(user2);
         post2.setPostDate(LocalDate.now());
         post2.setHeadline("Lauras first Post");

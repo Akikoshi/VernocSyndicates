@@ -20,7 +20,7 @@ public class UserServiceMap extends AbstractMapService<User, Long> implements Us
 
     @Override
     public User save(User object) {
-        return super.save(object.getId(),object);
+        return super.save(object);
     }
 
     @Override
