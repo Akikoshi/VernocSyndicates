@@ -2,9 +2,11 @@ package com.semjasa.vernocsyndicates.services.Maps;
 
 import com.semjasa.vernocsyndicates.models.User;
 import com.semjasa.vernocsyndicates.services.UserService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
 public class UserServiceMap extends AbstractMapService<User, Long> implements UserService {
     @Override
     public Set<User> findAll() {

@@ -2,9 +2,11 @@ package com.semjasa.vernocsyndicates.services.Maps;
 
 import com.semjasa.vernocsyndicates.models.Post;
 import com.semjasa.vernocsyndicates.services.PostService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
 public class PostServiceMap extends AbstractMapService<Post, Long> implements PostService {
 
     @Override

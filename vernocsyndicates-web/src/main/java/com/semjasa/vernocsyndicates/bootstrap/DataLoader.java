@@ -2,8 +2,6 @@ package com.semjasa.vernocsyndicates.bootstrap;
 
 import com.semjasa.vernocsyndicates.models.Post;
 import com.semjasa.vernocsyndicates.models.User;
-import com.semjasa.vernocsyndicates.services.Maps.PostServiceMap;
-import com.semjasa.vernocsyndicates.services.Maps.UserServiceMap;
 import com.semjasa.vernocsyndicates.services.PostService;
 import com.semjasa.vernocsyndicates.services.UserService;
 import org.springframework.boot.CommandLineRunner;
@@ -16,9 +14,9 @@ public class DataLoader implements CommandLineRunner {
     private final UserService userService;
     private final PostService postService;
 
-    public DataLoader() {
-        userService = new UserServiceMap();
-        postService = new PostServiceMap();
+    public DataLoader(UserService userService, PostService postService) {
+        this.userService = userService;
+        this.postService = postService;
     }
 
     @Override
