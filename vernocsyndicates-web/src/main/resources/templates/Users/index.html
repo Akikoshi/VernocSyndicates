@@ -1,20 +1,20 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{fragments/layout :: layout (~{::body},'users')}">
 <head>
     <meta charset="UTF-8">
     <title>User - Index Page</title>
 </head>
 <body>
 <!--/*@thymesVar id="user" type="com.semjasa.vernocsyndicates.models.User"*/-->
-    <h1 th:text="'List of Users'">User Index Page</h1>
+    <h1 th:text="#{users}">User Index Page</h1>
 
-    <table>
+    <table id="users" class="table table-striped">
         <thead>
         <tr>
-            <td>Id</td>
-            <td>First Name</td>
-            <td>Last Name</td>
-            <td>Full Name</td>
+            <th style="width: 150px">Id</th>
+            <th style="width: 150px">First Name</th>
+            <th style="width: 150px">Last Name</th>
+            <th style="width: 150px">Full Name</th>
         </tr>
         </thead>
         <tbody>

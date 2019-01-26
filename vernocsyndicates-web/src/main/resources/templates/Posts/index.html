@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{fragments/layout :: layout (~{::body},'posts')}">
 <head>
     <meta charset="UTF-8">
     <title>Posts - Index Page</title>
@@ -7,15 +7,27 @@
 <body>
 <!--/*@thymesVar id="post" type="com.semjasa.vernocsyndicates.models.Post"*/-->
     <h1 th:text="'List of all Posts'">Post Index Page</h1>
-
-    <div th:each="post : ${posts}">
-        <h3 th:text="${post?.headline}"></h3>
-        <br>
-        <p th:text="'Post ID: ' + ${post?.id}"></p>
-        <p th:text="${post?.content}"></p>
-        <p th:text="${post?.postDate}"></p>
-        <p th:text="${post?.user?.fullName} + ' with ID ' + ${post?.user?.id}"></p>
-        <br>
-    </div>
+    <table id="posts" class="table table-striped">
+        <thead>
+        <tr>
+            <th style="width: 150px">Id</th>
+            <th style="width: 150px">Headline</th>
+            <th style="width: 150px">Content</th>
+            <th style="width: 150px">Postdate</th>
+            <th style="width: 150px">User</th>
+            <th style="width: 150px">UserId</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="post : ${posts}">
+            <td th:text="${post?.id}"></td>
+            <td th:text="${post?.headline}"></td>
+            <td th:text="${post?.content}"></td>
+            <td th:text="${post?.postDate}"></td>
+            <td th:text="${post?.user?.fullName}"></td>
+            <td th:text="${post?.user?.id}"></td>
+        </tr>
+        </tbody>
+    </table>
 </body>
 </html>
