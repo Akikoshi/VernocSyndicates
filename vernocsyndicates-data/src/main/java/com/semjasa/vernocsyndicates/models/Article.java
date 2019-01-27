@@ -1,12 +1,12 @@
 package com.semjasa.vernocsyndicates.models;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public class Article extends BaseEntity{
     public String headline;
     public String content;
     public User creator;
-    public Date creationDate;
+    public LocalDate creationDate;
 
     public String getHeadline() {
         return headline;
@@ -32,11 +32,11 @@ public class Article extends BaseEntity{
         this.creator = creator;
     }
 
-    public Date getCreationDate() {
+    public LocalDate getCreationDate() {
         return creationDate;
     }
 
-    public void setCreationDate(Date creationDate) {
+    public void setCreationDate(LocalDate creationDate) {
         this.creationDate = creationDate;
     }
 }
