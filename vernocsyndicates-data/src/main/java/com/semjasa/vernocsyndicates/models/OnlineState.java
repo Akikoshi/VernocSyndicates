@@ -2,7 +2,7 @@ package com.semjasa.vernocsyndicates.models;
 
 public class OnlineState {
 
-    public State state;
+    private State state;
 
     public OnlineState(State state) {
         this.state = state;

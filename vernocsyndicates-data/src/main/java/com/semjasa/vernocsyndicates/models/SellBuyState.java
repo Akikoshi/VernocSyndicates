@@ -1,7 +1,7 @@
 package com.semjasa.vernocsyndicates.models;
 
 public class SellBuyState {
-    public SellBuyState sellBuyState;
+    private SellBuyState sellBuyState;
 
     public SellBuyState(SellBuyState sellBuyState) {
         this.sellBuyState = sellBuyState;

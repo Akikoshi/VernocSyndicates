@@ -4,10 +4,10 @@ import java.time.LocalDate;
 
 public class Post extends BaseEntity {
 
-    public String headline;
-    public String content;
-    public User user;
-    public LocalDate postDate;
+    private String headline;
+    private String content;
+    private User user;
+    private LocalDate postDate;
 
     public String getHeadline() {
         return headline;

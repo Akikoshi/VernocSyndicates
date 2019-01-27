@@ -3,10 +3,10 @@ package com.semjasa.vernocsyndicates.models;
 import java.time.LocalDate;
 
 public class Article extends BaseEntity{
-    public String headline;
-    public String content;
-    public User creator;
-    public LocalDate creationDate;
+    private String headline;
+    private String content;
+    private User creator;
+    private LocalDate creationDate;
 
     public String getHeadline() {
         return headline;
