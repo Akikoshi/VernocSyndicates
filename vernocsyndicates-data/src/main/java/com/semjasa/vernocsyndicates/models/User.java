@@ -2,36 +2,40 @@ package com.semjasa.vernocsyndicates.models;
 
 public class User extends BaseEntity {
 
-    private String firstName;
-    private String lastName;
-    private String fullName;
-    private String rank;
+    private String ingameName;
+    private String userName;
+    private Rank rank;
+    private String email;
 
-    public String getFirstName() {
-        return firstName;
+    public String getIngameName() {
+        return ingameName;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setIngameName(String ingameName) {
+        this.ingameName = ingameName;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
-    public String getFullName() {
-        return firstName + " " + lastName;
-    }
-
-    public String getRank() {
+    public Rank getRank() {
         return rank;
     }
 
-    public void setRank(String rank) {
+    public void setRank(Rank rank) {
         this.rank = rank;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }
