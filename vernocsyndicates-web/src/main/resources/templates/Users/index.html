@@ -12,17 +12,19 @@
         <thead>
         <tr>
             <th style="width: 150px">Id</th>
-            <th style="width: 150px">First Name</th>
-            <th style="width: 150px">Last Name</th>
-            <th style="width: 150px">Full Name</th>
+            <th style="width: 150px">Ingame Name</th>
+            <th style="width: 150px">User Name</th>
+            <th style="width: 150px">Email</th>
+            <th style="width: 150px">Rang</th>
         </tr>
         </thead>
         <tbody>
         <tr th:each="user : ${users}">
             <td th:text="${user?.id}"></td>
-            <td th:text="${user?.firstName}"></td>
-            <td th:text="${user?.lastName}"></td>
-            <td th:text="${user?.fullName}"></td>
+            <td th:text="${user?.ingameName}"></td>
+            <td th:text="${user?.userName}"></td>
+            <td th:text="${user?.email}"></td>
+            <td th:text="${user?.rank?.name}"></td>
         </tr>
         </tbody>
     </table>

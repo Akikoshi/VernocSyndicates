@@ -24,8 +24,8 @@
             <td th:text="${post?.headline}"></td>
             <td th:text="${post?.content}"></td>
             <td th:text="${post?.postDate}"></td>
-            <td th:text="${post?.user?.fullName}"></td>
-            <td th:text="${post?.user?.id}"></td>
+            <td th:text="${post?.user?.userName}"></td>
+            <td th:text="${post?.user?.rank?.name}"></td>
         </tr>
         </tbody>
     </table>
