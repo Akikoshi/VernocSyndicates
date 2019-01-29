@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{fragments/layout :: layout (~{::body},'newsletters')}">
+<head>
+    <meta charset="UTF-8">
+    <title>Newsletter - Index Page</title>
+</head>
+<body>
+<h1 th:text="'Weekly News'"></h1>
+
+<div th:each="newsletter : ${newsletters}">
+    <div>
+        <h3 th:text="${newsletter?.headline}"></h3>
+    </div>
+    <div th:each="article : ${newsletter?.articles}">
+        <h4 th:text="${article?.headline}"></h4>
+        <p th:text="${article?.content}"></p>
+        <b th:text="${article?.creator?.userName}"></b>
+        <p style="font-size: 10px" th:text="${article?.creationDate}"></p>
+        <hr>
+    </div>
+    <br>
+</div>
+
+</body>
+</html>

@@ -2,9 +2,11 @@ package com.semjasa.vernocsyndicates.services.Maps;
 
 import com.semjasa.vernocsyndicates.models.Newsletter;
 import com.semjasa.vernocsyndicates.services.NewsletterService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
 public class NewsletterServiceMap extends AbstractMapService<Newsletter, Long> implements NewsletterService {
     @Override
     public Set<Newsletter> findAll() {

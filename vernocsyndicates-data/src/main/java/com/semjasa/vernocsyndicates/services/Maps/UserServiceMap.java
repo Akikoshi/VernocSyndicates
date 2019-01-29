@@ -32,9 +32,4 @@ public class UserServiceMap extends AbstractMapService<User, Long> implements Us
     public User findById(Long id) {
         return super.findById(id);
     }
-
-    @Override
-    public User findByLastName(String lastName) {
-        return null;
-    }
 }
