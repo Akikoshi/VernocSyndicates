@@ -1,8 +1,10 @@
 package com.semjasa.vernocsyndicates.bootstrap;
 
+import com.semjasa.vernocsyndicates.models.Newsletter;
 import com.semjasa.vernocsyndicates.models.Post;
 import com.semjasa.vernocsyndicates.models.Rank;
 import com.semjasa.vernocsyndicates.models.User;
+import com.semjasa.vernocsyndicates.services.NewsletterService;
 import com.semjasa.vernocsyndicates.services.PostService;
 import com.semjasa.vernocsyndicates.services.UserService;
 import org.springframework.boot.CommandLineRunner;
@@ -14,14 +16,25 @@ import java.time.LocalDate;
 public class DataLoader implements CommandLineRunner {
     private final UserService userService;
     private final PostService postService;
+    private final NewsletterService newsletterService;
 
-    public DataLoader(UserService userService, PostService postService) {
+    public DataLoader(UserService userService, PostService postService, NewsletterService newsletterService) {
         this.userService = userService;
         this.postService = postService;
+        this.newsletterService = newsletterService;
     }
 
     @Override
     public void run(String... args) throws Exception {
+
+        Newsletter newsletter1 = new Newsletter();
+        newsletter1.setCreationDate(LocalDate.parse("2017-01-01"));
+        newsletter1.setHeadline("News News News");
+
+        newsletterService.save(newsletter1);
+
+        System.out.println("Newsletter loaded.");
+
         Rank rank1 = new Rank();
 
         rank1.setName("Admin");
@@ -31,6 +44,8 @@ public class DataLoader implements CommandLineRunner {
 
         rank2.setName("Support");
         rank2.setDescription("Aufganen: Verwaltung der Benutzer der Webseite");
+
+        System.out.println("Ranks loaded.");
 
         User user1 = new User();
 

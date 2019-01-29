@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{fragments/layout :: layout (~{::body},'newsletter')}">
+<head>
+    <meta charset="UTF-8">
+    <title>Newsletter - Index Page</title>
+</head>
+<body>
+<h1 th:text="'Weekly News'"></h1>
+
+<div th:each="newsletter : ${newsletters}">
+    <div th:text="newsletter.creationDate"></div>
+    <div th:text="newsletter.headline"></div>
+</div>
+
+</body>
+</html>
