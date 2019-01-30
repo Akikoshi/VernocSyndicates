@@ -1,22 +1,13 @@
 package com.semjasa.vernocsyndicates.models;
 
 public class OnlineState {
+    private String onlineState;
 
-    private State state;
-
-    public OnlineState(State state) {
-        this.state = state;
+    public String getOnlineState() {
+        return onlineState;
     }
 
-    public State getState() {
-        return state;
+    public void setOnlineState(String onlineState) {
+        this.onlineState = onlineState;
     }
-
-    public void setState(State state) {
-        this.state = state;
-    }
-}
-
-enum State{
-    Online, Offline
 }

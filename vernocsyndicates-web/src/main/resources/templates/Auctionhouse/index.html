@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{fragments/layout :: layout (~{::body},'auctionhouseEntries')}">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="'Auctionhouse - List all Entries'">Title</title>
+</head>
+<body>
+<h1 th:text="'List of all Auctionhouse Entries'">Post Index Page</h1>
+<table id="posts" class="table table-striped">
+    <thead>
+    <tr>
+        <th style="width: 150px">Item</th>
+        <th style="width: 150px">Price</th>
+        <th style="width: 150px">Username</th>
+        <th style="width: 150px">Amount</th>
+        <th style="width: 150px">Online Status</th>
+        <th style="width: 150px">WTS / WTB</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr th:each="auctionhouseEntry : ${auctionhouseEntries}">
+            <td th:text="${auctionhouseEntry?.itemName}"></td>
+            <td th:text="${auctionhouseEntry?.costs}"></td>
+            <td th:text="${auctionhouseEntry?.user.ingameName}"></td>
+            <td th:text="${auctionhouseEntry?.amount}"></td>
+            <td th:text="${auctionhouseEntry?.onlineState}"></td>
+            <td th:text="${auctionhouseEntry?.sellBuyState}"></td>
+        </tr>
+    </tbody>
+</table>
+</body>
+</html>

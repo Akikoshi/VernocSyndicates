@@ -3,10 +3,10 @@ package com.semjasa.vernocsyndicates.models;
 public class AuctionhouseEntry extends BaseEntity {
     private String itemName;
     private Integer costs;
-    private String playerName;
+    private User user;
     private Integer amount;
-    private OnlineState onlineState;
-    private SellBuyState sellBuyState;
+    private String onlineState;
+    private String sellBuyState;
 
     public String getItemName() {
         return itemName;
@@ -24,12 +24,12 @@ public class AuctionhouseEntry extends BaseEntity {
         this.costs = costs;
     }
 
-    public String getPlayerName() {
-        return playerName;
+    public User getUser() {
+        return user;
     }
 
-    public void setPlayerName(String playerName) {
-        this.playerName = playerName;
+    public void setUser(User user) {
+        this.user = user;
     }
 
     public Integer getAmount() {
@@ -40,19 +40,19 @@ public class AuctionhouseEntry extends BaseEntity {
         this.amount = amount;
     }
 
-    public OnlineState getOnlineState() {
+    public String getOnlineState() {
         return onlineState;
     }
 
-    public void setOnlineState(OnlineState onlineState) {
+    public void setOnlineState(String onlineState) {
         this.onlineState = onlineState;
     }
 
-    public SellBuyState getSellBuyState() {
+    public String getSellBuyState() {
         return sellBuyState;
     }
 
-    public void setSellBuyState(SellBuyState sellBuyState) {
+    public void setSellBuyState(String sellBuyState) {
         this.sellBuyState = sellBuyState;
     }
 }

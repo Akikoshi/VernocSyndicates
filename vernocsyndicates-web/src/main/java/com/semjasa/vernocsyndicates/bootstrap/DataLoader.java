@@ -1,10 +1,7 @@
 package com.semjasa.vernocsyndicates.bootstrap;
 
 import com.semjasa.vernocsyndicates.models.*;
-import com.semjasa.vernocsyndicates.services.ArticleService;
-import com.semjasa.vernocsyndicates.services.NewsletterService;
-import com.semjasa.vernocsyndicates.services.PostService;
-import com.semjasa.vernocsyndicates.services.UserService;
+import com.semjasa.vernocsyndicates.services.*;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -18,12 +15,19 @@ public class DataLoader implements CommandLineRunner {
     private final PostService postService;
     private final NewsletterService newsletterService;
     private final ArticleService articleService;
+    private final AuctionhouseService auctionhouseService;
 
-    public DataLoader(UserService userService, PostService postService, NewsletterService newsletterService, ArticleService articleService) {
+    public DataLoader(UserService userService
+            , PostService postService
+            , NewsletterService newsletterService
+            , ArticleService articleService
+            , AuctionhouseService auctionhouseService)
+    {
         this.userService = userService;
         this.postService = postService;
         this.newsletterService = newsletterService;
         this.articleService = articleService;
+        this.auctionhouseService = auctionhouseService;
     }
 
     @Override
@@ -133,5 +137,37 @@ public class DataLoader implements CommandLineRunner {
         newsletterService.save(newsletter2);
 
         System.out.println("Newsletters loaded.");
+
+        AuctionhouseEntry auctionhouseEntry1 = new AuctionhouseEntry();
+        auctionhouseEntry1.setItemName("Helm");
+        auctionhouseEntry1.setAmount(1);
+        auctionhouseEntry1.setCosts(100);
+        auctionhouseEntry1.setUser(user1);
+        auctionhouseEntry1.setSellBuyState("WTS");
+        auctionhouseEntry1.setOnlineState("Online im Spiel");
+
+        auctionhouseService.save(auctionhouseEntry1);
+
+        AuctionhouseEntry auctionhouseEntry2 = new AuctionhouseEntry();
+        auctionhouseEntry2.setItemName("Schulter");
+        auctionhouseEntry2.setAmount(4);
+        auctionhouseEntry2.setCosts(2000);
+        auctionhouseEntry2.setUser(user1);
+        auctionhouseEntry2.setSellBuyState("WTS");
+        auctionhouseEntry2.setOnlineState("Online im Spiel");
+
+        auctionhouseService.save(auctionhouseEntry2);
+
+        AuctionhouseEntry auctionhouseEntry3 = new AuctionhouseEntry();
+        auctionhouseEntry3.setItemName("Brust");
+        auctionhouseEntry3.setAmount(2);
+        auctionhouseEntry3.setCosts(6000);
+        auctionhouseEntry3.setUser(user2);
+        auctionhouseEntry3.setSellBuyState("WTB");
+        auctionhouseEntry3.setOnlineState("Offline");
+
+        auctionhouseService.save(auctionhouseEntry3);
+
+        System.out.println("Auctionhouse Data  loaded.");
     }
 }

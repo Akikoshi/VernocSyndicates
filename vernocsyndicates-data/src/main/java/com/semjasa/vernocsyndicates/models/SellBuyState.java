@@ -1,21 +1,13 @@
 package com.semjasa.vernocsyndicates.models;
 
 public class SellBuyState {
-    private SellBuyState sellBuyState;
+    private String sellBuyState;
 
-    public SellBuyState(SellBuyState sellBuyState) {
-        this.sellBuyState = sellBuyState;
-    }
-
-    public SellBuyState getSellBuyState() {
+    public String getSellBuyState() {
         return sellBuyState;
     }
 
-    public void setSellBuyState(SellBuyState sellBuyState) {
+    public void setSellBuyState(String sellBuyState) {
         this.sellBuyState = sellBuyState;
     }
-}
-
-enum SellOrBuy{
-    Sell, Buy
 }

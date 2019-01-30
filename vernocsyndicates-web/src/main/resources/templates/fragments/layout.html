@@ -49,19 +49,24 @@
                     <span>Home</span>
                 </li>
 
-                <li th:replace="::menuItem ('/users/find','users','find users','search','Find users')">
+                <li th:replace="::menuItem ('/users','users','Find Users','search','Find users')">
                     <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
                     <span>Find users</span>
                 </li>
 
-                <li th:replace="::menuItem ('/posts.html','posts','posts','th-list','posts')">
+                <li th:replace="::menuItem ('/posts','posts','Posts','th-list','find Help in Posts')">
                     <span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>
                     <span>Posts</span>
                 </li>
 
-                <li th:replace="::menuItem ('/oups','error','trigger a RuntimeException to see how it is handled','warning-sign','Error')">
-                    <span class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span>
-                    <span>Error</span>
+                <li th:replace="::menuItem ('/auctionhouse','auctionhouse','Auctionhouse','btc','Auctionhouse')">
+                    <span class="glyphicon glyphicon-btc" aria-hidden="true"></span>
+                    <span>Posts</span>
+                </li>
+
+                <li th:replace="::menuItem ('/newsletters','newsletters','News news news','header','Newsletter')">
+                    <span class="glyphicon glyphicon-header" aria-hidden="true"></span>
+                    <span>Newsletters</span>
                 </li>
 
             </ul>
